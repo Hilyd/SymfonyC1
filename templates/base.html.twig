@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="/css/hangman.css">
+    {% block stylesheets %}{% endblock %}
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+<div class="container">
+    <header class="row">
+        <div class="col-md-4">
+            <div id="logo">
+                <h1>
+                    <a href="{{ path('home') }}">Hangman</a>
+                </h1>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <ul class="text-right">
+                <li><a href="{{ path('app_game_show', {'_locale':'fr'}) }}">French</a></li>
+                <li><a href="{{ path('app_game_show', {'_locale':'en'}) }}">English</a></li>
+                <li><a href="{{ path('app_game_show', {'_locale':'de'}) }}">German</a></li>
+            </ul>
+
+            <nav>
+                {{ include ('_menu.html.twig') }}
+            </nav>
+
+
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="game" class="box">
+
+                {% block body %} {% endblock %}
+
+
+            </div>
+            <div class="col-md-4">
+                <div id="sidebar">
+                    <div class="box">
+                        <h3>Dernières parties</h3>
+                        <div class="date-list">
+                            <ul class="list date-list">
+
+                                <li class="first"><span class="date">Jan 13</span> <a href="#">Ultrices quisque molestie</a></li>
+                                <li><span class="date">Jan 7</span> <a href="#">Neque dolor eget</a></li>
+                                <li><span class="date">Jan 1</span> <a href="#">Sollicitudin interdum</a></li>
+                                <li class="last"><span class="date">Dec 26</span> <a href="#">Varius dignissim</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3>Derniers joueurs</h3>
+                        <ul>
+                            <li>user 1</li>
+                            <li>user 2</li>
+                            <li>user 3</li>
+                            <li>user 4</li>
+                            <li>user 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

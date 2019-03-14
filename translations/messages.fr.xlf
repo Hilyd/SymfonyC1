@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="nSt9UqO" resname="game.title">
+        <source>game.title</source>
+        <target>Bienvenu-e sur le jeu du pendu</target>
+      </trans-unit>
+      <trans-unit id="8x1ob93" resname="game.attempts">
+        <source>game.attempts</source>
+        <target>
+        {0} Vous n'avez pas encore entré de lettre|
+        {1} Vous avez entré une seule lettre|
+        [2, Inf] Vous avez encore %count% lettres
+        </target>
+      </trans-unit>
+      <trans-unit id="CnCCOAO" resname="game.restart">
+        <source>game.restart</source>
+        <target>Redémarrez le jeu</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

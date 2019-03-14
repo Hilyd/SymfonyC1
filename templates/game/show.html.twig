@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+
+
+    <h2>{{ 'game.title'|trans}}</h2>
+
+    <p class="attempts">
+        {{ 'game.attempts'|trans({'%count%':game_letters|length}) }}
+    </p>
+
+    <ul class="word-letters">
+        {% for l in game_letters %}
+            <li class=""guessed>{{ l }}</li>
+        {% endfor %}
+    </ul>
+
+    <p class="attempts">
+        <a href="{{ path('app_game_restart') }}">{{ 'game.restart'|trans }}</a>
+    </p>
+
+    <br class="clearfix">
+
+    <h2>Essayer une lettre</h2>
+
+    <ul>
+        {% for l in range('A', 'Z') %}
+            <li class="letter btn">
+                <a href="{{ path('app_game_playletter', {'letter':l}) }}">{{ l }}</a>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+    <h2>Essayer un mot</h2>
+
+    <form action="{{ path('app_game_playword') }}" method="post" class="form-inline">
+        <div class="form-group">
+            <input name="word" class="form-control mb-2" placeholder="Mot">
+        </div>
+        <button>Laisse-moi deviner...</button>
+    </form>
+
+{% endblock %}

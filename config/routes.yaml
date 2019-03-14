@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_demo_foobar:
+  path: /hello/{name}
+  controller: App\Controller\DemoController::hello
+  methods: [POST]
+  requirements:
+    name: '[A-Za-z]+'
